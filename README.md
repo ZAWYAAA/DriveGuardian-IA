@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 =======
 # DriveGuardian IA — Assistant d’aide à la conduite (Computer Vision / ADAS)
 
