@@ -1,4 +1,3 @@
-=======
 # DriveGuardian IA — Assistant d’aide à la conduite (Computer Vision / ADAS)
 
 **DriveGuardian IA** est un prototype d’assistant d’aide à la conduite basé sur une dashcam.  
