@@ -19,7 +19,7 @@ try:
 except ImportError:
     HAS_WINSOUND = False
 
-# Matplotlib optionnel (graphes export PNG)
+# Matplotlib (graphes export PNG)
 try:
     import matplotlib.pyplot as plt
     HAS_MPL = True
@@ -90,7 +90,7 @@ PANEL_H = 360
 RISK_STABLE_RATIO = 0.6
 
 # Graphes
-SHOW_GRAPHS = False  # True => plt.show() ; False => sauvegarde PNG seulement
+SHOW_GRAPHS = False  
 
 # Chemins
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -146,7 +146,6 @@ def speak(kind: str):
     if HAS_WINSOUND:
         winsound.PlaySound(path, winsound.SND_FILENAME | winsound.SND_ASYNC)
     else:
-        # fallback si pas Windows (ne bloque pas l'exécution)
         print(f"[AUDIO] winsound indisponible sur cet OS. (son non joue) -> {path}")
 
 
@@ -209,7 +208,7 @@ def combine_images(frame_bgr, line_image):
 
 def estimate_lane_offset_from_lines(lines, frame_shape):
     """
-    Estime offset normalisé (offset_px / lane_width) et une confiance.
+    Estime offset normalisé (offset_px / lane_width) et une confiance
     """
     h, w = frame_shape[:2]
     if lines is None or len(lines) == 0:

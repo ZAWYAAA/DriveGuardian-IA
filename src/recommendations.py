@@ -1,7 +1,7 @@
 def format_percentage(ratio):
     """
     Transforme un ratio entre 0 et 1 en pourcentage arrondi.
-    Exemple : 0.234 -> 23
+    
     """
     return int(ratio * 100)
 

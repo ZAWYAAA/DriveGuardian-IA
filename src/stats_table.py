@@ -5,14 +5,14 @@ csv_path = r"C:\Users\marou\Desktop\DriveGuardianIA\data\metrics\metrics_trajet_
   # <-- mets ton fichier
 df = pd.read_csv(csv_path)
 
-# ---- adapte les noms de colonnes ici ----
-COL_TIME = "time_s"        # ou None si tu n'as pas
+
+COL_TIME = "time_s"        
 COL_LANE = "lane_status"   # valeurs: centre/proche/hors (ou équivalent)
 COL_RISK = "risk_level"    # SAFE/WARNING/DANGER
 COL_NVEH = "num_vehicles"  # 0..3
 COL_DIST = "distance_est"  # distance heuristique
-COL_WAVW = "audio_warning" # 0/1 si dispo (sinon None)
-COL_WAVD = "audio_danger"  # 0/1 si dispo (sinon None)
+COL_WAVW = "audio_warning" # 0/1 si dispo
+COL_WAVD = "audio_danger"  # 0/1 si dispo
 
 total_frames = len(df)
 

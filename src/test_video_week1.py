@@ -19,7 +19,7 @@ cap = cv2.VideoCapture(video_path)
 if not cap.isOpened():
     raise RuntimeError("Impossible d'ouvrir la vidéo. Vérifie le chemin ou le format.")
 
-# 3) Récupérer quelques infos
+# 3) Récupérer infos
 fps = cap.get(cv2.CAP_PROP_FPS)
 frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
